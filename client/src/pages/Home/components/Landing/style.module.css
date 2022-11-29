@@ -1,0 +1,37 @@
+.manHolds {
+  width: 35rem;
+  height: 28rem;
+}
+
+.fillCircle {
+  width: 30rem;
+  height: 30rem;
+}
+.strokCircle {
+  width: 35rem;
+  height: 35rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .fillCircle {
+    width: 25rem;
+    height: 25rem;
+  }
+  .strokCircle {
+    width: 30rem;
+    height: 30rem;
+  }
+  .market {
+    bottom: 40%;
+  }
+  .manHolds {
+    width: 30rem;
+    height: 25rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .market {
+    left: 30%;
+  }
+}

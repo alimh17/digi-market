@@ -1,0 +1,93 @@
+.brand {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.show {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #fff;
+  z-index: 10;
+  width: 80%;
+  transition: all 1s ease;
+  animation: show 0.2s linear;
+  display: flex;
+  flex-direction: columnsl;
+  border-left: 1px solid gray;
+  border-radius: 8px 0 0 8px;
+}
+
+@keyframes show {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateX(50%);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+    display: flex;
+  }
+}
+
+.hiden {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  background-color: #fff;
+  width: 80%;
+  transition: all 1s ease;
+  animation: hiden 0.2s linear;
+  display: none;
+  opacity: 0;
+  z-index: -2;
+}
+
+@keyframes hiden {
+  0% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateX(50%);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.mobile:hover + .text {
+  display: none;
+}
+
+.laptop:hover + .text_2 {
+  display: none;
+}
+
+.search-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.manHolds {
+  width: 20rem;
+  height: 15rem;
+}
+
+.fillCircle {
+  width: 15rem;
+  height: 15rem;
+}
+.strokCircle {
+  width: 20rem;
+  height: 20rem;
+}

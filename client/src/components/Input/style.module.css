@@ -1,0 +1,9 @@
+.arrows::-webkit-outer-spin-button,
+.arrows::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.arrows[type="number"] {
+  -moz-appearance: textfield;
+}

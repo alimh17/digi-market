@@ -1,0 +1,13 @@
+.before-price,
+.now-price {
+  font-family: "IranSans", sans-serif !important;
+  font-weight: 200;
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 450px) {
+  .before-price,
+  .now-price {
+    font-size: 1rem;
+  }
+}

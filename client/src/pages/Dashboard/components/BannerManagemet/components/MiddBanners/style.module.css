@@ -1,0 +1,10 @@
+.middBannerForm {
+  all: unset;
+  padding: 0.8rem;
+  border: 1px solid gray;
+  border-radius: 10px;
+  background-color: #4b3082;
+  color: #fff;
+  margin: 0 0.5rem;
+  cursor: pointer;
+}

@@ -1,0 +1,10 @@
+.fillModal::-webkit-scrollbar {
+  width: 8px;
+  background-color: rgb(189, 189, 189);
+  border-radius: 8px;
+}
+
+.fillModal::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: #AA1945;
+}

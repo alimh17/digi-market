@@ -1,0 +1,19 @@
+body {
+  direction: rtl !important;
+  font-family: "BYekan", sans-serif !important;
+}
+
+.options {
+  list-style: none;
+}
+
+.options > li {
+  display: flex;
+  align-items: center;
+}
+.options > li::before {
+  content: "\2022";
+  color: gray;
+  font-size: 20px !important;
+  margin: 0 5px;
+}
