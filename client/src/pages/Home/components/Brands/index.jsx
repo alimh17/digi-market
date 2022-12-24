@@ -7,8 +7,8 @@ import { BiStar } from "react-icons/bi";
 // import { brands } from "../../../../data/brands";
 import { useSelector } from "react-redux";
 import { useEffect } from "react";
-import { allBrandsConvert } from "../../../../utils/brnadConverToPersian";
-import { selectBrandsImages } from "../../../../utils/brands";
+import { brandConvertToPersian } from "utils/brnadConverToPersian";
+import { selectBrandsImages } from "utils/brands";
 
 const Brands = () => {
   const [brands, setBrands] = useState([]);
@@ -17,7 +17,7 @@ const Brands = () => {
     if (product.length > 0) {
       product = _.flattenDeep(product);
       let allBrand = [...brands];
-      allBrand = product.map((item) => allBrandsConvert(item.brand));
+      allBrand = product.map((item) => brandConvertToPersian(item.brand));
       allBrand = _.uniq(allBrand);
       allBrand = allBrand.filter((f) => typeof f !== "undefined");
       setBrands(allBrand);

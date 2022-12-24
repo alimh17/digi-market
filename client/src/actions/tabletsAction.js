@@ -1,8 +1,8 @@
 import _ from "lodash";
 import { getAllTablets } from "../server/TabletsRequests";
-import { tabletBrandConvertToPersian } from "../utils/brnadConverToPersian";
-import { replacePersianNumber } from "../utils/replacePrice";
-import { switchColor } from "../utils/switchColor";
+import { brandConvertToPersian } from "utils/brnadConverToPersian";
+import { replacePersianNumber } from "utils/replacePrice";
+import { switchColor } from "utils/switchColor";
 
 export const tabletInit = () => async (dispatch, getState) => {
   const copyState = { ...getState().tablets };
@@ -97,7 +97,7 @@ export const sortTabletsByBrand = (brand) => async (dispatch, getState) => {
   let tablets = { ...getState().tablets };
   tablets.brands = brand;
 
-  const convert = tablets.brands.map((b) => tabletBrandConvertToPersian(b));
+  const convert = tablets.brands.map((b) => brandConvertToPersian(b));
 
   const allTablets = await getAllTablets();
 

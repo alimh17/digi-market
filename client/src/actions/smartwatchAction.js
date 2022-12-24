@@ -1,8 +1,8 @@
 import _ from "lodash";
-import { getAllSmartWatch } from "../server/SmartWatchRequests";
-import { smartWatchBrandConvertToPersian } from "../utils/brnadConverToPersian";
-import { replacePersianNumber } from "../utils/replacePrice";
-import { switchColor } from "../utils/switchColor";
+import { getAllSmartWatch } from "server/SmartWatchRequests";
+import { brandConvertToPersian } from "utils/brnadConverToPersian";
+import { replacePersianNumber } from "utils/replacePrice";
+import { switchColor } from "utils/switchColor";
 
 export const smartwatchInit = () => async (dispatch, getState) => {
   const copyState = { ...getState().smartwatchs };
@@ -97,9 +97,7 @@ export const sortSmartwatchByBrand = (brand) => async (dispatch, getState) => {
   let smartwatchs = { ...getState().smartwatchs };
   smartwatchs.brands = brand;
 
-  const convert = smartwatchs.brands.map((b) =>
-    smartWatchBrandConvertToPersian(b)
-  );
+  const convert = smartwatchs.brands.map((b) => brandConvertToPersian(b));
 
   const allSmartwatchs = await getAllSmartWatch();
 

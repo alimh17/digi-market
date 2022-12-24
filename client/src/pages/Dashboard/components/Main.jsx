@@ -6,7 +6,7 @@ import Brands from "./Brands";
 import NewProducts from "./NewProducts";
 import News from "./News";
 import Offers from "./Offers";
-import ProductManagment from "./product_managment/ProductManagment";
+// import ProductManagment from "./ProductManagment";
 import WayContact from "./WayContact";
 
 const Main = () => {
@@ -16,7 +16,7 @@ const Main = () => {
     <main className="flex font-sans">
       <Aside active={active} setActive={setActive} />
       <section className="w-full">
-        <ProductManagment active={active} />
+        {/* <ProductManagment active={active} /> */}
         <BannerManagement active={active} />
         <Offers active={active} />
         <NewProducts active={active} />

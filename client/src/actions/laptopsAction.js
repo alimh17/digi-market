@@ -1,6 +1,6 @@
 import _ from "lodash";
 import { getAllLaptops } from "../server/LaptopRequests";
-import { laptopBrandConvertToPersian } from "../utils/brnadConverToPersian";
+import { brandConvertToPersian } from "utils/brnadConverToPersian";
 import { replacePersianNumber } from "../utils/replacePrice";
 import { switchColor } from "../utils/switchColor";
 
@@ -97,7 +97,7 @@ export const sortLaptopsByBrand = (brand) => async (dispatch, getState) => {
   let laptops = { ...getState().laptops };
   laptops.brands = brand;
 
-  const convert = laptops.brands.map((b) => laptopBrandConvertToPersian(b));
+  const convert = laptops.brands.map((b) => brandConvertToPersian(b));
 
   const allLaptops = await getAllLaptops();
 

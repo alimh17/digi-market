@@ -230,7 +230,7 @@ export const mobileSortByNetwork = (network) => async (dispatch, getState) => {
 
 export const mobileSortByWeight = (range) => async (dispatch, getState) => {
   const copyState = { ...getState().mobiles };
-  copyState.weigtht = range
+  copyState.weight = range
 
   const mobiles = await getAllMobiles()
 

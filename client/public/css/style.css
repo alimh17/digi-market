@@ -1,30 +1,24 @@
+@font-face {
+  font-family: "Vazir";
+  src: url("../fotns/Vazir-Medium.woff");
+  src: url("../fotns/Vazir-Medium.woff2");
+  src: url("../fotns/Vazir-Medium.ttf");
+  font-weight: 400;
+}
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-@font-face {
-  font-family: "BYekan";
-  src: url("../fotns/BYEKAN/BYekan.woff");
-  src: url("../fotns/BYEKAN/Yekan.woff2");
-  src: url("../fotns/BYEKAN/BYekan.ttf");
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "IranSans";
-  src: url("../fotns/iranSans/AIranianSans.woff");
-  src: url("../fotns/iranSans/AIranianSans.woff2");
-  src: url("../fotns/iranSans/AIranianSans.ttf");
+  font-family: "Vazir";
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;1,500&display=swap");
 
 body,
 html {
-  font-family: "BYekan", sans-serif !important;
+  font-family: "Vazir", sans-serif !important;
   direction: rtl !important;
   scroll-behavior: smooth;
 }

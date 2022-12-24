@@ -3,7 +3,7 @@ const init = {
   brands: [],
   colors: [],
   priceRange: [0, 50000000],
-  weigtht: [100, 450],
+  weight: [100, 450],
   network: [],
   ram: [],
 };

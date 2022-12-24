@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import _ from "lodash";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { convertAllBrands } from "../../utils/brnadConverToPersian";
-import { showLoadingAction } from "../../actions/loadingAction";
-import Card from "../../components/Card";
+import { brandConvertToPersian } from "utils/brnadConverToPersian";
+import { showLoadingAction } from "actions/loadingAction";
+import Card from "components/Card";
 
 const Brands = () => {
   const [selectedBrand, setSelectedBrand] = useState([]);
@@ -15,7 +15,7 @@ const Brands = () => {
 
   const handleChangeState = () => {
     products = _.flattenDeep(products);
-    const brand = convertAllBrands(location.pathname.split("/")[2]);
+    const brand = brandConvertToPersian(location.pathname.split("/")[2]);
     products = products.filter((f) => f.brand === brand);
 
     setSelectedBrand(products);
